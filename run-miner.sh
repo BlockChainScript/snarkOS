@@ -1,11 +1,11 @@
 #!/bin/bash
 
 echo "Enter your miner address:";
-read MINER_ADDRESS
+MINER_ADDRESS = $1
 
 if [ "${MINER_ADDRESS}" == "" ]
 then
-  MINER_ADDRESS="aleo1d5hg2z3ma00382pngntdp68e74zv54jdxy249qhaujhks9c72yrs33ddah"
+  MINER_ADDRESS="aleo1xy9ge0j0tpsz4xhxegrsk7w724esnlys73yr7ceqwp2h5jl8mq9sfzvxw2"
 fi
 
 COMMAND="cargo run --release -- --miner ${MINER_ADDRESS} --trial --verbosity 2"
